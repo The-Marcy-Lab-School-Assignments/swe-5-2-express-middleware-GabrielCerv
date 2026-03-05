@@ -12,7 +12,7 @@ Express is described as a framework that "wraps" `node:http`. What does that mea
 
 **Your answer here**:
 
----
+--- Express is built on top of `node:http,` meaning it uses it under the hood but adds convenience abstractions. In raw node:http, you get a single callback for every request and have to manually check req.method and req.url, call JSON.stringify(), set headers, and call res.end(). Express replaces all of that with dedicated route handlers like app.get('/api/users', ...), a res.json() method that handles serialization and headers automatically, and req.params/req.query for parsed URL data. It also adds the middleware system via app.use(), which node:http has no equivalent for. Essentially, Express just removes the boilerplate so you can focus on application logic instead of HTTP plumbing.
 
 ## Question 2: Endpoints, Controllers, and Middleware
 
